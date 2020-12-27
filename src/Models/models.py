@@ -22,13 +22,16 @@ class Habilidade(BaseModel):
     tipo = CharField(max_length=50)
     nome = CharField(max_length=50)
     desc = CharField(max_length=50)
+    #acc
+    #poder
+    #kind
 
 class Pokemon(BaseModel):
-    num_id = IntegerField()
+    id = IntegerField()
     nome = CharField(max_length=50)
     tipo_1 = CharField(max_length=50)
     tipo_2 = CharField(max_length=50,null=False)
-    skill = ForeignKeyField(Habilidade)
+    skill_id = ForeignKeyField(Habilidade)
 
 # @app.before_request
 # def before_request():
